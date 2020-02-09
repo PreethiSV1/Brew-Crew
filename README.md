@@ -8,6 +8,7 @@ A new Flutter application for learning Integration of Flutter with Firebase.
 2. Depend on firebase_auth and cloud_firestore packages. 
 
 3. Draw the widget tree
+![Brew_crew](https://user-images.githubusercontent.com/40830235/74108027-ba8c6a80-4b9b-11ea-8581-b1c910d29d01.png)
 
 4. Create subfolders under *lib* folder
 <pre>
