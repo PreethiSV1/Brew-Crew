@@ -1,16 +1,38 @@
 # brew_crew
 
-A new Flutter application.
+A new Flutter application for learning Integration of Flutter with Firebase.
 
-## Getting Started
+## Steps 
+1. Create Firebase app in console and follow all the steps. 
 
-This project is a starting point for a Flutter application.
+2. Depend on firebase_auth and cloud_firestore packages. 
 
-A few resources to get you started if this is your first Flutter project:
+3. Draw the widget tree
+![Brew_crew](https://user-images.githubusercontent.com/40830235/74108027-ba8c6a80-4b9b-11ea-8581-b1c910d29d01.png)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+4. Create subfolders under *lib* folder
+<pre>
+  - main.dart
+  - screens
+    - wrapper.dart
+    - authentication
+      - auth.dart
+    - home
+      - home.dart
+  - services
+    - auth.dart
+</pre>
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+5. Create text widgets inside (i) auth.dart and (ii) home.dart, wrapper.dart should call one of these (i) and (ii) widgets based on whether the user is logged in or not. Initially call any one from wrapper.dart file.
+
+6. Clear all unnecessary part of main.dart and leave only MyApp to return Wrapper widget.
+
+7. In Firebase console of the app, set up Sign-in method under Authentication. (Email and Password, Anonymous)
+
+8. Edit auth.dart to contain a class called AuthService to assist in sign in anonymously, sign in with email and password, register with email, sign out.
+
+  - Create FirebaseAuth instance
+  - Use the instance to create a (Future) function for signing in anonymously and returns the user
+  
+
+
