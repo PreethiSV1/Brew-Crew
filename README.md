@@ -32,6 +32,7 @@ A new Flutter application for learning Integration of Flutter with Firebase.
 8. Edit auth.dart to contain a class called AuthService to assist in sign in anonymously, sign in with email and password, register with email, sign out.
 
   - Create FirebaseAuth instance
+  - Use the instance to create a (Future) function for signing in anonymously and returns the user
   
 
 
