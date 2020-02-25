@@ -34,5 +34,11 @@ A new Flutter application for learning Integration of Flutter with Firebase.
   - Create FirebaseAuth instance
   - Use the instance to create a (Future) function for signing in anonymously and returns the user
   
+9. Create user.dart file that returns uid of the user if signed in
 
+10. Use Stream of FirebaseUser to listen to auth changes
+
+11. In main.dart, wrap MaterialApp with StreamProvider widget to provide data to all widget descendants
+
+12. Edit auth.dart to implement sign out functionality
 
