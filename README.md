@@ -42,3 +42,8 @@ A new Flutter application for learning Integration of Flutter with Firebase.
 
 12. Edit auth.dart to implement sign out functionality
 
+13. Sign in and Register screens created using Form Widget after creating a new file called register.dart under Authentication
+
+14. Create Toggle function to toggle between the 2 screens (Sign in and Register) in the authenticate.dart and pass them while calling widget SignIn() or Register()
+
+
