@@ -11,8 +11,10 @@ class Register extends StatefulWidget {
 
 class _RegisterState extends State<Register> {
 
-  String email = '', password = '';
+  String email = '', password = '', error = '';
   final AuthService _auth = AuthService();
+  final _formKey = GlobalKey<FormState>();
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,10 +36,12 @@ class _RegisterState extends State<Register> {
       body: Container(
         padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 20.0),
         child: Form(
+          key: _formKey,
           child: Column(
             children: <Widget>[
               SizedBox(height: 20.0,),
               TextFormField(
+                validator: (value) => value.isEmpty ? 'Enter an email ID': null,
                 onChanged: (value) {
                   setState(() {
                     email = value;
@@ -46,6 +50,8 @@ class _RegisterState extends State<Register> {
               ),
               SizedBox(height: 20.0,),
               TextFormField(
+                validator: (value) => value.length < 6 ? 'Enter a password '
+                    'with 6+ characters': null,
                 obscureText: true,
                 onChanged: (value) {
                   password = value;
@@ -56,13 +62,26 @@ class _RegisterState extends State<Register> {
                 elevation: 2.0,
                 color: Colors.pink[400],
                 child: Text(
-                  'Sign up',
+                  'Register',
                   style: TextStyle(color: Colors.white),
                 ),
-                onPressed: () {
-                  print(email);
-                  print(password);
+                onPressed: () async {
+                  if (_formKey.currentState.validate()) {
+                    dynamic result = await _auth.registerWithEmailAndPassword
+                      (email, password);
+                    if (result == null) {
+                      // Error
+                      setState(() {
+                        error = 'Please enter a valid email';
+                      });
+                    }
+                  }
                 },
+              ),
+              SizedBox (height: 12.0,),
+              Text(
+                error,
+                style: TextStyle(color: Colors.red, fontSize: 14.0),
               )
             ],
           ),
