@@ -44,6 +44,9 @@ A new Flutter application for learning Integration of Flutter with Firebase.
 
 13. Sign in and Register screens created using Form Widget after creating a new file called register.dart under Authentication
 
-14. Create Toggle function to toggle between the 2 screens (Sign in and Register) in the authenticate.dart and pass them while calling widget SignIn() or Register()
+14. Create Toggle function to toggle between the 2 screens (Sign in and Register) in the authenticate.dart and pass them while calling widget SignIn() or Register() and create Logout button in Home Screen to logout.
 
+15. Use GlobalKey<FormState> formkey to validate if email and password is valid, in register.dart file. In auth.dart file, create new function registerWithEmailAndPassword(email, password).
+  
+16.   
 
