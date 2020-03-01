@@ -48,5 +48,9 @@ A new Flutter application for learning Integration of Flutter with Firebase.
 
 15. Use GlobalKey<FormState> formkey to validate if email and password is valid, in register.dart file. In auth.dart file, create new function registerWithEmailAndPassword(email, password).
   
-16.   
+16. Create new function to signInWithEmailAndPassword in auth.dart file and formkey in sign_in.dart
+file.
+
+17. Format the input text box using InputDecoration (constants.dart) and add Loading screen (loading
+.dart)
 

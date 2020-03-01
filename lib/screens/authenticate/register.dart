@@ -1,4 +1,6 @@
 import 'package:brew_crew/services/auth.dart';
+import 'package:brew_crew/shared/constants.dart';
+import 'package:brew_crew/shared/loading.dart';
 import 'package:flutter/material.dart';
 
 class Register extends StatefulWidget {
@@ -14,10 +16,11 @@ class _RegisterState extends State<Register> {
   String email = '', password = '', error = '';
   final AuthService _auth = AuthService();
   final _formKey = GlobalKey<FormState>();
+  bool loading = false;
   
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return loading ? Loading() : Scaffold(
       backgroundColor: Colors.brown[100],
       appBar: AppBar(
         backgroundColor: Colors.brown[400],
@@ -41,6 +44,7 @@ class _RegisterState extends State<Register> {
             children: <Widget>[
               SizedBox(height: 20.0,),
               TextFormField(
+                decoration: textInputDecoration.copyWith(hintText: 'Email'),
                 validator: (value) => value.isEmpty ? 'Enter an email ID': null,
                 onChanged: (value) {
                   setState(() {
@@ -50,6 +54,7 @@ class _RegisterState extends State<Register> {
               ),
               SizedBox(height: 20.0,),
               TextFormField(
+                decoration: textInputDecoration.copyWith(hintText: 'Password'),
                 validator: (value) => value.length < 6 ? 'Enter a password '
                     'with 6+ characters': null,
                 obscureText: true,
@@ -67,12 +72,16 @@ class _RegisterState extends State<Register> {
                 ),
                 onPressed: () async {
                   if (_formKey.currentState.validate()) {
+                    setState(() {
+                      loading = true;
+                    });
                     dynamic result = await _auth.registerWithEmailAndPassword
                       (email, password);
                     if (result == null) {
                       // Error
                       setState(() {
                         error = 'Please enter a valid email';
+                        loading = false;
                       });
                     }
                   }
