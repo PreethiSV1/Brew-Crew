@@ -51,6 +51,17 @@ A new Flutter application for learning Integration of Flutter with Firebase.
 16. Create new function to signInWithEmailAndPassword in auth.dart file and formkey in sign_in.dart
 file.
 
-17. Format the input text box using InputDecoration (constants.dart) and add Loading screen (loading
-.dart)
+17. Format the input text box using InputDecoration (constants.dart) and add Loading screen (loading.dart)
+
+18. Create database.dart file. Create a class DatabaseService that takes 'uid' as parameter.
+
+19. Create a collection reference called brewCollection (Firestore instance) that can contain all
+user data for a particular uid.
+
+20. Create a function called updateUserData that takes parameters sugars, name, strength and
+updates the value to the user document in Firestore (if document doesn't exist, it creates a
+document for the uid).
+
+21. Call updateUserData function in database.dart from registerWithEmailAndPassword function to
+create new user document after registering and the cloud firestore 'brews' gets updated (website).
 
