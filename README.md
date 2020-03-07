@@ -87,3 +87,6 @@ settings icon.
 
 26. Create settings_form.dart file for updating brew settings that contain a TextFormField,
 DropdownButtonFormField and Slider for updating name, sugars and strength respectively.
+
+27. Create UserData class in user.dart file to hold current user's data. After we get userData
+snapshot, it is converted to UserData object by using \_userDataFromSnapshot() in database.dart.
