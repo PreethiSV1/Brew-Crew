@@ -1,6 +1,4 @@
-# brew_crew
-
-A new Flutter application for learning Integration of Flutter with Firebase.
+Flutter application for learning Integration of Flutter with Firebase.
 
 ## Steps 
 1. Create Firebase app in console and follow all the steps. 
