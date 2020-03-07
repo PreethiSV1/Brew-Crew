@@ -24,7 +24,9 @@ A new Flutter application for learning Integration of Flutter with Firebase.
       - sign_in.dart
     - home
       - brew_list.dart
+      - brew_tile.dart
       - home.dart
+      - settings_form.dart
     - wrapper.dart
   - services
     - auth.dart
