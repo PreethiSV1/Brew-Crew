@@ -90,3 +90,6 @@ DropdownButtonFormField and Slider for updating name, sugars and strength respec
 
 27. Create UserData class in user.dart file to hold current user's data. After we get userData
 snapshot, it is converted to UserData object by using \_userDataFromSnapshot() in database.dart.
+
+28. Setup StreamBuilder in home.dart file to receive UserData and update it both in the list and
+bottom sheet using updateUserData() in database.dart file.
