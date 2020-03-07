@@ -13,14 +13,21 @@ A new Flutter application for learning Integration of Flutter with Firebase.
 4. Create subfolders under *lib* folder
 <pre>
   - main.dart
+  - models
+    - brew.dart
+    - user.dart
   - screens
-    - wrapper.dart
-    - authentication
-      - auth.dart
+    - authenticate
+      - authenticate.dart
+      - register.dart
+      - sign_in.dart
     - home
+      - brew_list.dart
       - home.dart
+    - wrapper.dart
   - services
     - auth.dart
+    - database.dart
 </pre>
 
 5. Create text widgets inside (i) auth.dart and (ii) home.dart, wrapper.dart should call one of these (i) and (ii) widgets based on whether the user is logged in or not. Initially call any one from wrapper.dart file.
