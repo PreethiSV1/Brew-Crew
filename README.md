@@ -30,8 +30,8 @@ Flutter application for learning Integration of Flutter with Firebase.
     - auth.dart
     - database.dart
   - shared
-     - constants.dart
-     - loading.dart
+    - constants.dart
+    - loading.dart
 </pre>
 
 5. Create text widgets inside (i) auth.dart and (ii) home.dart, wrapper.dart should call one of these (i) and (ii) widgets based on whether the user is logged in or not. Initially call any one from wrapper.dart file.
