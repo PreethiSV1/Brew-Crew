@@ -77,7 +77,7 @@ create new user document after registering and the cloud firestore 'brews' gets 
 documents snapshots and use provider to get the data on home.dart and print it.
 
 23. Create a model class Brew (brew.dart) for storing brew values like user.dart. After we get
-brews, it is converted to List<Brew> using _brewListFromSnapshot() in database.dart. Update
-StreamProvider type to <List<Brew>> in home.dart file and Provider's type in brew.dart file.
+brews, it is converted to List of Brew using \_brewListFromSnapshot() in database.dart. Update
+StreamProvider type to List of Brew in home.dart file and Provider's type in brew.dart file.
 
 24. Create brew_tile.dart file to design tile (item) of the brew list in brew_list.dart file.
