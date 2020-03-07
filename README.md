@@ -93,3 +93,6 @@ snapshot, it is converted to UserData object by using \_userDataFromSnapshot() i
 
 28. Setup StreamBuilder in home.dart file to receive UserData and update it both in the list and
 bottom sheet using updateUserData() in database.dart file.
+
+29. Update CircleAvatar image to the coffee_icon.png in brew_tile.dart file and backgroundImage to
+home.dart file.
