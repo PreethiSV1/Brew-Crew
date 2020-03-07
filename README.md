@@ -81,3 +81,9 @@ brews, it is converted to List of Brew using \_brewListFromSnapshot() in databas
 StreamProvider type to List of Brew in home.dart file and Provider's type in brew.dart file.
 
 24. Create brew_tile.dart file to design tile (item) of the brew list in brew_list.dart file.
+
+25. Create a function \_showSettingsPanel to display bottom sheet in home.dart file on clicking
+settings icon.
+
+26. Create settings_form.dart file for updating brew settings that contain a TextFormField,
+DropdownButtonFormField and Slider for updating name, sugars and strength respectively.
