@@ -65,3 +65,9 @@ document for the uid).
 21. Call updateUserData function in database.dart from registerWithEmailAndPassword function to
 create new user document after registering and the cloud firestore 'brews' gets updated (website).
 
+22. Setup a stream (get brews in database.dart) to listen to firestore and get the collection's
+documents snapshots and use provider to get the data on home.dart and print it.
+
+23. Create a model class Brew (brew.dart) for storing brew values like user.dart. After we get
+brews, it is converted to List<Brew> using _brewListFromSnapshot() in database.dart and update
+StreamProvider type to <List<Brew>> in home.dart file and Provider's type in brew.dart file.
